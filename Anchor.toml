@@ -1,0 +1,23 @@
+[features]
+seeds = false
+[programs.localnet]
+nftmint = "EzskZvcwqeiNMnTjzyAReFgnH53QRxrztVfSJbmC5r3"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "localnet"
+wallet = "/Users/ttang/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/minttokenaccount.ts"
+# test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/nftmint.ts"
+# test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/heromint.ts"
+
+
+[[test.genesis]]
+address = "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
+program = "./deps/tests/mpl_token_metadata_1.2.5.so"
+
+
